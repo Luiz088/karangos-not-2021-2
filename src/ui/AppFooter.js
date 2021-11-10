@@ -7,35 +7,32 @@ import { makeStyles } from '@mui/styles'
 import CoffeeIcon from '@mui/icons-material/Coffee';
 
 const useStyles = makeStyles(theme => ({
-     box: {
-          position: 'absolute',
-          bottom: 0,
-          width: '100%'
-     },
-     typog: {
-          textAlign: 'center',
-          width: '100%'
-     },
-     toolbar: {
-          backgroundColor: theme.palette.background.hover,
-          padding: 0,
-          minHeight: '40px'
-     },
-     link: {
-          collor: theme.palette.secondary.light,
-          textDecoration: 'none',
-          '&:hover': {
-               textDecoration: 'underline'
-          }
-     },
-     'link: hover':{
-          textDecoration: 'underline'
-     }
+  box: {
+    position: 'absolute',
+    bottom: 0,
+    width: '100%'
+  },
+  typog: {
+    textAlign: 'center', // text-align: center
+    width: '100%'
+  },
+  toolbar: {
+    backgroundColor: theme.palette.background.hover,
+    padding: 0,
+    minHeight: '40px'
+  },
+  link: {
+    color: theme.palette.secondary.light,
+    textDecoration: 'none',
+    '&:hover': {
+      textDecoration: 'underline'
+    }
+  }
 }))
 
 export default function AppFooter() {
 
-     const classes = useStyles()
+  const classes = useStyles()
 
   return (
     <Box sx={{ flexGrow: 1 }} className={classes.box}>

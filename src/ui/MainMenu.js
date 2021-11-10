@@ -10,7 +10,9 @@ const useStyles = makeStyles(theme => ({
   link: {
     color: theme.palette.text.primary,
     textDecoration: 'none',
-    backgroundCollor: 'green'
+    padding: '10px',
+    width: '100%'
+
   },
   menuItem: {
     padding: 0
@@ -42,10 +44,10 @@ export default function MainMenu() {
         edge="start"
         color="inherit"
         aria-label="menu"
-        sx={{ mr: 2}}
+        sx={{ mr: 2 }}
       >
-           <MenuIcon />
-     </IconButton>
+        <MenuIcon />
+      </IconButton>
       <Menu
         id="basic-menu"
         anchorEl={anchorEl}
@@ -57,10 +59,10 @@ export default function MainMenu() {
       >
         <MenuItem onClick={handleClose} className={classes.menuItem}>
           <Link to="/clientes" className={classes.link}>Listagem de clientes</Link>
-          </MenuItem>
+        </MenuItem>
         <MenuItem onClick={handleClose} className={classes.menuItem}>
           <Link to="/clientes/new" className={classes.link}>Cadastrar novo cliente</Link>
-          </MenuItem>
+        </MenuItem>
       </Menu>
     </div>
   );
